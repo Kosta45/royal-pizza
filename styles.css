@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-backround {
+    z-index: 1;
+    background: -webkit-linear-gradient(90deg, #262629, #e64747, #b3967e);
+    background: linear-gradient(90deg, #3e3e42, #b14646, #7a6453);
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+
+/* Верстка всплывающего окна */
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open.close {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup.open .popup__content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+
+.popup-log-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: beige;
+    height: 30%;
+    width: 30%;
+    /* border: #e64747 2px solid; */
+    border-radius: 30px;
+}
+
+.field-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-button {
+    cursor: pointer;
+    height: 35px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.info-person {
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.info-person:hover,
+.popup-button:hover {
+    border: #e64747 4px solid;
+}
+
+/* 
+.info-person:focus,
+.popup-button:focus {
+    border: #e64747 solid 4px;
+} */
