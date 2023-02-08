@@ -4,17 +4,20 @@
     box-sizing: border-box;
 }
 
-.main-backround {
-    z-index: 1;
+.main-container {
+    z-index: -2;
     background: -webkit-linear-gradient(90deg, #262629, #e64747, #b3967e);
     background: linear-gradient(90deg, #3e3e42, #b14646, #7a6453);
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 
 
 
+/* Верстка всплывающего окна */
 /* Верстка всплывающего окна */
 .popup {
     display: flex;
@@ -89,3 +92,266 @@
 .popup-button:focus {
     border: #e64747 solid 4px;
 } */
+
+
+/* Верстка основного контента ========================================*/
+/* Верстка основного контента ========================================*/
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Верстка навигационного меню======================================= */
+
+.logo-pizza {
+    height: 10rem;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    margin-left: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    background: #a83030;
+    height: 43rem;
+    border-radius: 70px;
+}
+
+.main-nav,
+.footer-nav,
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 18px;
+    color: white;
+}
+
+.nav-btn {
+    transition: all 0.5s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.6) 100px;
+    color: #1a1a3b;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-style: 30px;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.fa-solid {
+    font-size: x-large;
+}
+
+
+/* Стили основной части контента. Блок где можно заказать еду=========================== */
+/* Стили основной части контента. Блок где можно заказать еду=========================== */
+
+/* Поиск по сайту */
+.main-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+    height: 38rem;
+    width: 56rem;
+    border-radius: 15px 0 0 15px;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 4rem;
+    width: 51rem;
+}
+
+.search-type {
+    border-style: none;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    height: 2.5rem;
+    width: 12rem;
+}
+
+/* Блок по центру, с акцией и категориями продуктов */
+/* Блок по центру, с акцией и категориями продуктов */
+.midle-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Акция и доставка =====================*/
+.prize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 160, 77);
+    width: 30rem;
+    border-radius: 20px;
+}
+
+.prize-info {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+    height: 12rem;
+    width: 20rem;
+}
+
+.delivery-bike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bike {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+    height: 9rem;
+}
+
+.prize-btn {
+    border-style: none;
+    background: #a83030;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.prize-btn:hover {
+    color: black;
+    background: white;
+    transition: all 0.5s ease;
+}
+
+/* Разные категории блюд и напитков ========================= */
+
+.pizza {
+    grid-area: pizza;
+}
+
+.burger {
+    grid-area: burger;
+}
+
+.snack {
+    grid-area: snack;
+}
+
+.drink {
+    grid-area: drink;
+}
+
+.choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    height: 5rem;
+    width: 5rem;
+    padding: 10px;
+    margin: 15px;
+    transition: all 0.5s ease;
+
+}
+
+.choice:hover {
+    background: #a83030;
+    box-shadow: 0px -4px 10px rgba(243, 19, 19, 0.3), 0 10px 10px rgba(253, 14, 14, 0.3);
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.logo-choice {
+    height: 50px;
+}
+
+.category {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "pizza . burger"
+        "snack .  drink";
+    margin-left: 100px;
+    padding: 10px;
+}
+
+/* Выбор блюд в выбранной категории =================================*/
+/* Выбор блюд в выбранной категории =================================*/
+
+/* Стилизация скрола для выбора меню */
+.menu::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eeeeee;
+    border: 1px solid black;
+    width: 5px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cf3838;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+/* ----------------------------------- */
+
+.menu {
+
+    background: #cf3838;
+    height: 26rem;
+    width: 50rem;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.t {
+    width: 15rem;
+    border: 1px white solid;
+    background: #262629;
+    height: 10rem;
+}
+
+
+/* Линия разделитель между заказом и основным контентом */
+/* Линия разделитель между заказом и основным контентом */
+
+.line-delimiter {
+    height: 38rem;
+    width: 2px;
+    background: #afafaf;
+}
+
+/* Блок с заказом ================================================= */
+/* Блок с заказом ================================================= */
+
+.order-box {
+    height: 38rem;
+    width: 20rem;
+    border-radius: 0 15px 15px 0;
+    background: white;
+}
