@@ -228,7 +228,7 @@
 
 .prize-btn {
     border-style: none;
-    background: #a83030;
+    background: #ca1a1a;
     color: white;
     border-radius: 20px;
     padding: 10px;
@@ -271,7 +271,7 @@
     width: 5rem;
     padding: 10px;
     margin: 15px;
-    transition: all 0.5s ease;
+
 
 }
 
@@ -303,11 +303,12 @@
 /* Стилизация скрола для выбора меню */
 .menu::-webkit-scrollbar {
     width: 15px;
+    box-shadow: 0px -4px 10px rgba(243, 19, 19, 0.3), 0 10px 10px rgba(253, 14, 14, 0.3);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
     background: #eeeeee;
-    border: 1px solid black;
     width: 5px;
     border-radius: 20px;
 }
@@ -315,27 +316,51 @@
 ::-webkit-scrollbar-thumb {
     background: #cf3838;
     border-radius: 10px;
-    border: 1px solid black;
 }
 
 /* ----------------------------------- */
 
 .menu {
-
-    background: #cf3838;
-    height: 26rem;
-    width: 50rem;
+    display: flex;
+    justify-content: center;
+    height: 20rem;
+    max-width: 50rem;
     border-radius: 10px;
     overflow-y: scroll;
 }
 
-.t {
-    width: 15rem;
-    border: 1px white solid;
-    background: #262629;
-    height: 10rem;
+
+/* Стили для меню в разделе "пицца", классы создаю через JavaScript innerHTML */
+.block-pizza {
+    display: flex;
+    flex-direction: column;
 }
 
+.img-pizza {
+    height: 11rem;
+}
+
+.box-pizza {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    width: 200px;
+    height: 280px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+.box-pizza:hover {
+    background: #a83030;
+    box-shadow: 0px -4px 10px rgba(243, 19, 19, 0.3), 0 10px 10px rgba(253, 14, 14, 0.3);
+    transition: all 0.5s ease;
+}
 
 /* Линия разделитель между заказом и основным контентом */
 /* Линия разделитель между заказом и основным контентом */

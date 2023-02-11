@@ -7,32 +7,21 @@ popupButton.addEventListener('click', closePopup)
 
 
 // Menu
-
-// const menuPizza = [
-//     { name: 'Carbonara', price: 30, button: "Add" },
-//     { name: 'Vegetable', price: 50, button: "Add" },
-//     { name: 'Royal', price: 30, button: "Add" },
-//     { name: 'Dragon', price: 60, button: "Add" },
-//     { name: 'Meat', price: 50, button: "Add" },
-//     { name: 'New', price: 60, button: "Add" },
-//     { name: 'Gribnaia', price: 40, button: "Add" },
-//     { name: 'Carbon', price: 33, button: "Add" },
-//     { name: 'Turtle', price: 28, button: "Add" }
-// ];
-
-
-
-
-
-
-
-
+const menuPizza = [
+    { name: 'Mushrooms-Сheese', price: 30, button: "Add" },
+    { name: 'Omelette-pizza', price: 50, button: "Add" },
+    { name: 'Roman-pizza', price: 30, button: "Add" },
+    { name: 'Royal-pizza', price: 60, button: "Add" },
+    { name: 'Royal-two-pizza', price: 50, button: "Add" },
+    { name: 'Tomato-pizza', price: 60, button: "Add" },
+    { name: 'DRAGON', price: 40, button: "Add" },
+    { name: 'Easy-pizza', price: 33, button: "Add" },
+    { name: 'Marinara', price: 28, button: "Add" }
+];
 
 
 // Functions ================
 
-// function createMenuCard() {
-// }
 
 // Open field to type name and surname
 const openPopup = setTimeout(() => {
@@ -47,3 +36,26 @@ function closePopup() {
     popupActiveTwo.classList.add('close')
 };
 
+
+function createChoiceMenuPizza() {
+    const menu = document.getElementById('menu-cards');
+    menu.innerHTML =
+        `<div class='block-pizza'>
+        <div class='box-pizza'> <img src='/img/pizzies/Mushrooms-Сheese-pizza.png' class='img-pizza'> <span>${menuPizza[0].name}  ${menuPizza[0].price}$</span>  <button>wsw</button></div>
+        <div  class='box-pizza'> <img src='/img/pizzies/Omelette-pizza.png' class='img-pizza'>        <span> ${menuPizza[1].name} ${menuPizza[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-pizza'> <img src='/img/pizzies/Roman-pizza.png' class='img-pizza'>           <span> ${menuPizza[2].name} ${menuPizza[0].price}$</span> <button>wsw</button></div>
+        </div>
+        <div class='block-pizza'>
+        <div  class='box-pizza'> <img src='/img/pizzies/Royal-pizza.png' class='img-pizza'>           <span> ${menuPizza[3].name} ${menuPizza[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-pizza'> <img src='/img/pizzies/Royal-two-pizza.png' class='img-pizza'>       <span> ${menuPizza[4].name} ${menuPizza[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-pizza'> <img src='/img/pizzies/Tomato-pizza.png' class='img-pizza'>          <span> ${menuPizza[5].name} ${menuPizza[0].price}$</span> <button>wsw</button></div>
+        </div>
+        <div class='block-pizza'>
+        <div  class='box-pizza'> <img src='/img/pizzies/DRAGON.png' class='img-pizza'>                <span> ${menuPizza[6].name} ${menuPizza[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-pizza'> <img src='/img/pizzies/Easy-pizza.png' class='img-pizza'>            <span> ${menuPizza[7].name} ${menuPizza[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-pizza'> <img src='/img/pizzies/Marinara.png' class='img-pizza'>              <span>${menuPizza[8].name} ${menuPizza[0].price}$</span>  <button>wsw</button></div>
+        </div>
+        `;
+};
+
+createChoiceMenuPizza();
