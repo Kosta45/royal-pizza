@@ -1,2 +1,2 @@
 # royal-pizza
-My new project. Website selling pizza, bergers and delicious drinks.
+My new project. Website selling pizza, burgers and delicious drinks.
