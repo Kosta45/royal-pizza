@@ -1,27 +1,60 @@
 // Selectors
 const popupButton = document.querySelector('.popup-button');
-const menuCards = document.getElementById('menuCards');
+const btnPizzaChoice = document.querySelector('.pizza')
+const btnBurgerChoice = document.querySelector('.burger')
+const btnSnackChoice = document.querySelector('.snack')
+const btnDrinkChoice = document.querySelector('.drink')
 
 // Adding Event Listener
-popupButton.addEventListener('click', closePopup)
+popupButton.addEventListener('click', closePopup);
+btnPizzaChoice.addEventListener('click', createChoiceMenuPizza);
+btnBurgerChoice.addEventListener('click', createChoiceMenuBurger);
+btnSnackChoice.addEventListener('click', createChoiceMenuSnack)
+btnDrinkChoice.addEventListener('click', createChoiceMenuDrink)
 
 
-// Menu
+// Menu. Array for choice menu. Can changing price and name -----------------------------------------------------------------------------------
 const menuPizza = [
-    { name: 'Mushrooms-Сheese', price: 30, button: "Add" },
-    { name: 'Omelette-pizza', price: 50, button: "Add" },
-    { name: 'Roman-pizza', price: 30, button: "Add" },
-    { name: 'Royal-pizza', price: 60, button: "Add" },
-    { name: 'Royal-two-pizza', price: 50, button: "Add" },
-    { name: 'Tomato-pizza', price: 60, button: "Add" },
-    { name: 'DRAGON', price: 40, button: "Add" },
-    { name: 'Easy-pizza', price: 33, button: "Add" },
-    { name: 'Marinara', price: 28, button: "Add" }
+    { name: 'Mushrooms-Сheese', price: 30 },
+    { name: 'Omelette-pizza', price: 50 },
+    { name: 'Roman-pizza', price: 30 },
+    { name: 'Royal-pizza', price: 60 },
+    { name: 'Royal-two-pizza', price: 50 },
+    { name: 'Tomato-pizza', price: 60 },
+    { name: 'DRAGON', price: 40 },
+    { name: 'Easy-pizza', price: 33 },
+    { name: 'Marinara', price: 28 }
+];
+const menuBurger = [
+    { name: 'Burger', price: 30 },
+    { name: 'Double-cheeseburger', price: 50 },
+    { name: 'Eggs-burger', price: 30 },
+    { name: 'Gamburger', price: 60 },
+    { name: 'Golden-burger', price: 50 },
+    { name: 'BigBurger', price: 60 },
+    { name: 'Cheeseburger', price: 40 },
+    { name: 'BlackBurger', price: 33 },
+    { name: 'Sausage-burger', price: 28 }
+];
+const menuSnack = [
+    { name: 'Mushrooms-Сheese', price: 30 },
+    { name: 'Omelette-pizza', price: 50 },
+    { name: 'Roman-pizza', price: 30 },
+    { name: 'Royal-pizza', price: 60 },
+    { name: 'Royal-two-pizza', price: 50 },
+    { name: 'Tomato-pizza', price: 60 }
+];
+const menuDrink = [
+    { name: 'Mushrooms-Сheese', price: 30 },
+    { name: 'Omelette-pizza', price: 50 },
+    { name: 'Roman-pizza', price: 30 },
+    { name: 'Royal-pizza', price: 60 },
+    { name: 'Royal-two-pizza', price: 50 },
+    { name: 'Tomato-pizza', price: 60 }
 ];
 
 
 // Functions ================
-
 
 // Open field to type name and surname
 const openPopup = setTimeout(() => {
@@ -36,6 +69,7 @@ function closePopup() {
     popupActiveTwo.classList.add('close')
 };
 
+// Function on choice menu. Create Burger, Snacks and Drinks lists. Code belowe
 
 function createChoiceMenuPizza() {
     const menu = document.getElementById('menu-cards');
@@ -58,4 +92,58 @@ function createChoiceMenuPizza() {
         `;
 };
 
+function createChoiceMenuBurger() {
+    const menu = document.getElementById('menu-cards');
+    menu.innerHTML =
+        `<div class='block-burger'>
+        <div class='box-burger'>  <img src='/img/burgers/Burger1.png' class='img-burger'>  <span>${menuBurger[0].name}  ${menuBurger[0].price}$</span>  <button>wsw</button></div>
+        <div  class='box-burger'> <img src='/img/burgers/Burger2.png' class='img-burger'>  <span> ${menuBurger[1].name} ${menuBurger[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-burger'> <img src='/img/burgers/Burger3.png' class='img-burger'>  <span> ${menuBurger[2].name} ${menuBurger[0].price}$</span> <button>wsw</button></div>
+        </div>
+        <div class='block-burger'>
+        <div  class='box-burger'> <img src='/img/burgers/Burger4.png' class='img-burger'>  <span> ${menuBurger[3].name} ${menuBurger[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-burger'> <img src='/img/burgers/Burger5.png' class='img-burger'>  <span> ${menuBurger[4].name} ${menuBurger[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-burger'> <img src='/img/burgers/Burger6.png' class='img-burger'>  <span> ${menuBurger[5].name} ${menuBurger[0].price}$</span> <button>wsw</button></div>
+        </div>
+        <div class='block-burger'>
+        <div  class='box-burger'> <img src='/img/burgers/Burger7.png' class='img-burger'>  <span> ${menuBurger[6].name} ${menuBurger[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-burger'> <img src='/img/burgers/Burger8.png' class='img-burger'>  <span> ${menuBurger[7].name} ${menuBurger[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-burger'> <img src='/img/burgers/Burger9.png' class='img-burger'>  <span>${menuBurger[8].name} ${menuBurger[0].price}$</span>  <button>wsw</button></div>
+        </div>
+        `;
+};
+function createChoiceMenuSnack() {
+    const menu = document.getElementById('menu-cards');
+    menu.innerHTML =
+        `<div class='block-snack'>
+        <div class='box-snack'>  <img src='/img/snacks/snack1.png' class='img-snack'>  <span>${menuSnack[0].name}  ${menuSnack[0].price}$</span>  <button>wsw</button></div>
+        <div  class='box-snack'> <img src='/img/snacks/snack2.png' class='img-snack'>  <span> ${menuSnack[1].name} ${menuSnack[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-snack'> <img src='/img/snacks/snack3.png' class='img-snack'>  <span> ${menuSnack[2].name} ${menuSnack[0].price}$</span> <button>wsw</button></div>
+        </div>
+        <div class='block-snack'>
+        <div  class='box-snack'> <img src='/img/snacks/snack4.png' class='img-snack'>  <span> ${menuSnack[3].name} ${menuSnack[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-snack'> <img src='/img/snacks/snack5.png' class='img-snack'>  <span> ${menuSnack[4].name} ${menuSnack[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-snack'> <img src='/img/snacks/snack6.png' class='img-snack'>  <span> ${menuSnack[5].name} ${menuSnack[0].price}$</span> <button>wsw</button></div>
+        </div>
+        `;
+};
+function createChoiceMenuDrink() {
+    const menu = document.getElementById('menu-cards');
+    menu.innerHTML =
+        `<div class='block-drink'>
+        <div  class='box-drink'> <img src='/img/drinks/drink1.png' class='img-drink'> <span> ${menuDrink[0].name}  ${menuDrink[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-drink'> <img src='/img/drinks/drink2.png' class='img-drink'> <span> ${menuDrink[1].name} ${menuDrink[0].price}$</span>  <button>wsw</button></div>
+        <div  class='box-drink'> <img src='/img/drinks/drink3.png' class='img-drink'> <span> ${menuDrink[2].name} ${menuDrink[0].price}$</span> <button>wsw</button></div>
+        </div>
+        <div class='block-drink'>
+        <div  class='box-drink'> <img src='/img/drinks/drink4.png' class='img-drink'>  <span> ${menuDrink[3].name} ${menuDrink[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-drink'> <img src='/img/drinks/drink5.png' class='img-drink'>  <span> ${menuDrink[4].name} ${menuDrink[0].price}$</span> <button>wsw</button></div>
+        <div  class='box-drink'> <img src='/img/drinks/drink6.png' class='img-drink'>  <span> ${menuDrink[5].name} ${menuDrink[0].price}$</span> <button>wsw</button></div>
+        </div>
+        `;
+};
+
+
+// Вызываю функцию для первоночального появления выбора меню "Пиццы"
 createChoiceMenuPizza();
+
