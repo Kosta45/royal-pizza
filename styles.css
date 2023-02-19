@@ -41,10 +41,10 @@
     visibility: visible;
 }
 
-.popup.open.close {
+/* .popup.open.close {
     opacity: 0;
     visibility: hidden;
-}
+} */
 
 .popup.open .popup__content {
     transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
@@ -328,6 +328,19 @@
     overflow-y: scroll;
 }
 
+/* Кнопка добавить в корзину. Она саздается innerHTML JS */
+.btn-add {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    height: 2rem;
+    width: 5rem;
+    border-radius: 20px;
+    border-style: none;
+    border: 1px black solid;
+    cursor: pointer;
+    margin: 15px 0 0px 0;
+}
+
 
 /* Стили для меню в разделе "пицца", классы создаю через JavaScript innerHTML */
 .block-pizza,
@@ -394,9 +407,65 @@
 /* Блок с заказом ================================================= */
 /* Блок с заказом ================================================= */
 
+
 .order-box {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
     height: 38rem;
     width: 20rem;
     border-radius: 0 15px 15px 0;
     background: white;
+}
+
+/* Информация о человеку, логотип человека */
+.display-name {
+    margin: 10px;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    width: 15rem;
+}
+
+.person-photo {
+    padding: 10px;
+    height: 5rem;
+    background-color: #d5d5d5;
+    border-radius: 50%;
+}
+
+/* Стилизация пунтков заказа */
+
+/* Адресс доставки  */
+
+.adress {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-adress {
+    border-style: none;
+    background: none;
+    cursor: pointer;
+    color: #ca1a1a;
+    font-weight: bolder;
+}
+
+.submit {
+    background: #c52e2e;
+    border-style: none;
+    color: white;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 30px;
+}
+
+.submit:hover {
+    color: black;
+    background: white;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border: 1px solid #262629;
 }
