@@ -1,4 +1,5 @@
 // Карточки снеков. Блоки товаров
+// Snack cards. Product blocks
 const menuSnack = [
     {
         vendorCode: 'snc0000',

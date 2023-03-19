@@ -23,7 +23,7 @@ li {
 
 
 /* Верстка всплывающего окна */
-/* Верстка всплывающего окна */
+/* Layout of the popup window */
 .popup {
     display: flex;
     justify-content: center;
@@ -45,11 +45,6 @@ li {
     opacity: 1;
     visibility: visible;
 }
-
-/* .popup.open.close {
-    opacity: 0;
-    visibility: hidden;
-} */
 
 .popup.open .popup__content {
     transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
@@ -92,15 +87,9 @@ li {
     border: #e64747 4px solid;
 }
 
-/* 
-.info-person:focus,
-.popup-button:focus {
-    border: #e64747 solid 4px;
-} */
-
 
 /* Верстка основного контента ========================================*/
-/* Верстка основного контента ========================================*/
+/* Layout of the main content =======================================*/
 .content {
     display: flex;
     align-items: center;
@@ -108,9 +97,9 @@ li {
 }
 
 /* Верстка навигационного меню======================================= */
-
+/* Navigation menu layout============================================ */
 .logo-pizza {
-    height: 10rem;
+    height: 160px;
     padding: 20px;
 }
 
@@ -125,7 +114,7 @@ li {
     align-self: center;
     flex-direction: column;
     background: #c52e2e;
-    height: 43rem;
+    height: 688px;
     border-radius: 70px;
 }
 
@@ -159,6 +148,7 @@ li {
 }
 
 /* Данные о пользователе. Минимум данных про эмейл и номер. */
+/* User data. Minimum data about the email and number. */
 .profile {
     display: flex;
     justify-content: center;
@@ -273,7 +263,8 @@ li {
 
 
 /* Благотварительная организация */
-/* Благотварительная организация */
+/* Charitable organization */
+
 .charity-block {
     display: flex;
     justify-content: center;
@@ -321,7 +312,7 @@ li {
 }
 
 /* Оставить отзыв ---------------------------------------------- */
-/* Оставить отзыв ---------------------------------------------- */
+/* Leave feedback ---------------------------------------------- */
 .review {
     display: flex;
     justify-content: center;
@@ -385,17 +376,18 @@ li {
 
 
 /* Стили основной части контента. Блок где можно заказать еду=========================== */
-/* Стили основной части контента. Блок где можно заказать еду=========================== */
+/* Styles for the main body of content. Block where you can order food================== */
 
 /* Поиск по сайту */
+/* Site search */
 .main-block {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
     background: white;
-    height: 38rem;
-    width: 56rem;
+    height: 608px;
+    width: 896px;
     border-radius: 15px 0 0 15px;
 }
 
@@ -403,13 +395,13 @@ li {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    height: 4rem;
-    width: 51rem;
+    height: 64px;
+    width: 816px;
 }
 
 
 /* Блок по центру, с акцией и категориями продуктов */
-/* Блок по центру, с акцией и категориями продуктов */
+/* Block in the center, with a promotion and product categories */
 .midle-block {
     display: flex;
     justify-content: space-between;
@@ -417,12 +409,13 @@ li {
 }
 
 /* Акция и доставка =====================*/
+/* Promotion and delivery =====================*/
 .prize {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(233, 160, 77);
-    width: 30rem;
+    width: 480px;
     border-radius: 20px;
 }
 
@@ -431,8 +424,8 @@ li {
     justify-content: space-around;
     flex-direction: column;
     padding: 20px;
-    height: 12rem;
-    width: 20rem;
+    height: 192px;
+    width: 320px;
 }
 
 .delivery-bike {
@@ -446,7 +439,7 @@ li {
     align-items: center;
     justify-content: end;
     padding: 10px;
-    height: 9rem;
+    height: 144px;
 }
 
 .prize-btn {
@@ -465,6 +458,7 @@ li {
 }
 
 /* Узнать больше про акцию */
+/* Find out more about the promotion */
 .popup-discount {
     display: flex;
     align-items: center;
@@ -534,6 +528,7 @@ li {
 }
 
 /* Разные категории блюд и напитков ========================= */
+/* Different categories of food and drinks ================== */
 
 .pizza {
     grid-area: pizza;
@@ -559,8 +554,8 @@ li {
     background: #ffffff;
     box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    height: 5rem;
-    width: 5rem;
+    height: 80px;
+    width: 80px;
     padding: 10px;
     margin: 15px;
     cursor: pointer;
@@ -590,9 +585,10 @@ li {
 }
 
 /* Выбор блюд в выбранной категории =================================*/
-/* Выбор блюд в выбранной категории =================================*/
+/* Select dishes in the selected category ===========================*/
 
 /* Стилизация скрола для выбора меню */
+/* Styling the scrollbar for menu selection */
 .menu::-webkit-scrollbar {
     width: 15px;
     border-radius: 10px;
@@ -614,13 +610,14 @@ li {
 .menu {
     display: flex;
     justify-content: center;
-    height: 20rem;
-    max-width: 50rem;
+    height: 320px;
+    max-width: 800px;
     border-radius: 10px;
     overflow-y: scroll;
 }
 
 /* Кнопка добавить в корзину. Она саздается innerHTML JS */
+/* Add to cart button. It creates innerHTML JS */
 .btn-add,
 .btn-info,
 .btn-info-burger,
@@ -628,8 +625,8 @@ li {
 .btn-info-drink {
     background: #ffffff;
     color: rgb(0, 0, 0);
-    height: 2rem;
-    width: 4rem;
+    height: 32px;
+    width: 64px;
     border-radius: 20px;
     border-style: none;
     border: 1px black solid;
@@ -639,6 +636,7 @@ li {
 
 
 /* Стили для меню в разделе "пицца", классы создаю через JavaScript innerHTML */
+/* Styles for the menu in the "pizza" section, I create classes via JavaScript innerHTML */
 .block-pizza,
 .block-burger,
 .block-snack,
@@ -648,20 +646,20 @@ li {
 }
 
 .img-pizza {
-    height: 11rem;
+    height: 176px;
 }
 
 .img-burger {
-    height: 9rem;
+    height: 144px;
 }
 
 .img-drink {
-    height: 6rem;
+    height: 96px;
 }
 
 
 .img-snack {
-    height: 6rem;
+    height: 96px;
 }
 
 .box-pizza,
@@ -693,7 +691,7 @@ li {
 }
 
 /* Начинка для пиццы. Блок создан с помощью JavaScript innerHTML*/
-/* Начинка для пиццы. Блок создан с помощью JavaScript innerHTML*/
+/* Pizza filling. Block created with JavaScript innerHTML*/
 .box-filling-pizza,
 .box-filling-burger,
 .box-filling-snack,
@@ -713,13 +711,14 @@ li {
 }
 
 /* кнопка закрытия описания. СОздана с помощью innerHTML */
+/* description close button. Created with innerHTML */
 .close-filling {
     border-style: none;
     background: #646161;
     color: rgb(255, 255, 255);
     border-radius: 20px;
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
     transition: 0.4s;
 }
@@ -734,29 +733,28 @@ li {
 
 
 /* Линия разделитель между заказом и основным контентом */
-/* Линия разделитель между заказом и основным контентом */
+/* Separator line between order and main content */
 
 .line-delimiter {
-    height: 38rem;
+    height: 608px;
     width: 2px;
     background: #afafaf;
 }
 
 /* Блок с заказом ================================================= */
-/* Блок с заказом ================================================= */
-
-
+/* Order block ==================================================== */
 .order-box {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    height: 38rem;
-    width: 20rem;
+    height: 608px;
+    width: 320px;
     border-radius: 0 15px 15px 0;
     background: white;
 }
 
 /* Информация о человеку, логотип человека */
+/* Person information, person logo */
 .display-name {
     margin: 10px;
 }
@@ -764,20 +762,21 @@ li {
 .person {
     display: flex;
     align-items: center;
-    width: 15rem;
+    width: 240px;
 }
 
 .person-photo {
     padding: 10px;
-    height: 5rem;
+    height: 80px;
     background-color: #d5d5d5;
     border-radius: 50%;
 }
 
 /* Стилизация пунтков заказа */
+/* Styling order items */
 
 /* Адресс доставки  */
-
+/* Delivery adress  */
 .adress {
     display: flex;
     justify-content: space-between;
@@ -829,8 +828,8 @@ li {
     background: #c52e2e;
     border-style: none;
     color: white;
-    width: 8rem;
-    height: 2rem;
+    width: 128px;
+    height: 32px;
     border-radius: 30px;
 }
 
@@ -844,7 +843,7 @@ li {
 
 
 
-/* Открытая корзина по центру экрана */
+/* Open cart in the center of the screen */
 /* Открытая корзина по центру экрана */
 .summary.open {
     display: flex;
@@ -890,14 +889,14 @@ li {
     background-color: #3e3e42;
 }
 
-/* Корзина маленькая сбоку --------------------------------------------------------- */
-/* Корзина маленькая сбоку ---------------------------------------------------------  */
+/* Small basket on the side -------------------------------------- */
+/* Корзина маленькая сбоку --------------------------------------  */
 .summary {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 15rem;
-    width: 19rem;
+    height: 240px;
+    width: 304px;
     overflow-y: scroll;
     transition: all 0.8s ease 0s;
 
@@ -926,8 +925,8 @@ li {
 .cart-sum {
     display: flex;
     margin: 5px;
-    height: 4rem;
-    width: 17rem;
+    height: 64px;
+    width: 272px;
     border-radius: 20px;
 }
 
@@ -935,7 +934,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 17rem;
+    width: 272px;
 }
 
 .delete {
@@ -949,6 +948,7 @@ li {
 }
 
 /* Скролл в заказе */
+/* Scroll in order */
 .summary::-webkit-scrollbar {
     width: 10px;
     border-radius: 10px;

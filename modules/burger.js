@@ -1,5 +1,5 @@
 // Карточки бургеров. Блоки товаров
-
+// Burger cards. Product blocks
 const menuBurger = [
     {
         vendorCode: 'brg0000',

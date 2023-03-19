@@ -1,4 +1,5 @@
 // Импорт блоков, карточек товаров.
+// Import of blocks, product cards.
 import menuPizza from './modules/pizza.js';
 import menuBurger from './modules/burger.js';
 import menuDrink from './modules/drink.js';
@@ -305,6 +306,7 @@ function appPizzaShop() {
 
 
         // функция для закрытия списка ингридиентов (начинки)
+        // function to close the list of ingredients (toppings)
         const closeFillingPizza = document.querySelector('.close-pizza-list');
         closeFillingPizza.onclick = createChoiceMenuPizza;
 
@@ -559,7 +561,8 @@ function appPizzaShop() {
                                   <i data-id='piz0008' class="fa-solid fa-minus delete"></i>
                                  </div> `
         }
-        // Отрисовка бургеров--------------------------
+        // Отрисовка бургеров--------------------
+        // Draw Burgers--------------------------
         else if (event.target.dataset.id === menuBurger[0].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuBurger[0].imgBasket}</div>
@@ -625,6 +628,7 @@ function appPizzaShop() {
                                  </div> `
         }
         // Отрисовка снеков --------------------
+        // Drawing snacks --------------------
         else if (event.target.dataset.id === menuSnack[0].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuSnack[0].imgBasket}</div>
@@ -669,6 +673,7 @@ function appPizzaShop() {
                                  </div> `
         }
         // Отрисовка напитков --------------------------------
+        // Draw drinks --------------------------------
         else if (event.target.dataset.id === menuDrink[0].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuDrink[0].imgBasket}</div>
@@ -740,6 +745,7 @@ function appPizzaShop() {
     };
 
     // Вызываю функцию для первоночального появления выбора меню "Пиццы"
+    // Calling the function for the initial appearance of the "Pizza" menu selection
     createChoiceMenuPizza();
 };
 

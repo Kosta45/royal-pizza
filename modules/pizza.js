@@ -1,5 +1,5 @@
 // Карточка пиццы, блоки товаров.
-
+// Pizza card, product blocks.
 const menuPizza = [
     {
         vendorCode: 'piz0000',

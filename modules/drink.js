@@ -1,4 +1,5 @@
 // Карточки напитков. Блоки товаров
+// Drink cards. Product blocks
 const menuDrink = [
     {
         vendorCode: 'drk0000',
