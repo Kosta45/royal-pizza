@@ -5,8 +5,8 @@ const menuDrink = [
         vendorCode: 'drk0000',
         name: 'Cola',
         price: 30,
-        img: `<img src='/img/drinks/drink1.png' class='img-drink'>`,
-        imgBasket: `<img src='/img/drinks/drink1.png' class='basket-img-narrow'>`,
+        img: `<img src='img/drinks/drink1.png' class='img-drink'>`,
+        imgBasket: `<img src='img/drinks/drink1.png' class='basket-img-narrow'>`,
         btns: `<div>
                     <button class='btn-add' data-id='drk0000'>Add</button>
                     <button class='btn-info-drink' data-id='drk0000'>Filling</button>
@@ -24,8 +24,8 @@ const menuDrink = [
         vendorCode: 'drk0001',
         name: 'Sprite',
         price: 50,
-        img: `<img src='/img/drinks/drink2.png' class='img-drink'>`,
-        imgBasket: `<img src='/img/drinks/drink2.png' class='basket-img-narrow'>`,
+        img: `<img src='img/drinks/drink2.png' class='img-drink'>`,
+        imgBasket: `<img src='img/drinks/drink2.png' class='basket-img-narrow'>`,
         btns: `<div>
                     <button class='btn-add' data-id='drk0001'>Add</button>
                     <button class='btn-info-drink' data-id='drk0001'>Filling</button>
@@ -43,8 +43,8 @@ const menuDrink = [
         vendorCode: 'drk0002',
         name: 'Coffe',
         price: 30,
-        img: `<img src='/img/drinks/drink3.png' class='img-drink'>`,
-        imgBasket: `<img src='/img/drinks/drink3.png' class='basket-img-coffe'>`,
+        img: `<img src='img/drinks/drink3.png' class='img-drink'>`,
+        imgBasket: `<img src='img/drinks/drink3.png' class='basket-img-coffe'>`,
         btns: `<div>
                     <button class='btn-add' data-id='drk0002'>Add</button>
                     <button class='btn-info-drink' data-id='drk0002'>Filling</button>
@@ -66,8 +66,8 @@ const menuDrink = [
         vendorCode: 'drk0003',
         name: 'Tea',
         price: 60,
-        img: `<img src='/img/drinks/drink4.png' class='img-drink'>`,
-        imgBasket: `<img src='/img/drinks/drink4.png' class='basket-img-flattened'>`,
+        img: `<img src='img/drinks/drink4.png' class='img-drink'>`,
+        imgBasket: `<img src='img/drinks/drink4.png' class='basket-img-flattened'>`,
         btns: `<div>
                     <button class='btn-add' data-id='drk0003'>Add</button>
                     <button class='btn-info-drink' data-id='drk0003'>Filling</button>
@@ -85,8 +85,8 @@ const menuDrink = [
         vendorCode: 'drk0004',
         name: 'Tea2',
         price: 50,
-        img: `<img src='/img/drinks/drink5.png' class='img-drink'>`,
-        imgBasket: `<img src='/img/drinks/drink5.png' class='basket-img-flattened'>`,
+        img: `<img src='img/drinks/drink5.png' class='img-drink'>`,
+        imgBasket: `<img src='img/drinks/drink5.png' class='basket-img-flattened'>`,
         btns: `<div>
                     <button class='btn-add' data-id='drk0004'>Add</button>
                     <button class='btn-info-drink' data-id='drk0004'>Filling</button>
@@ -107,8 +107,8 @@ const menuDrink = [
         vendorCode: 'drk0005',
         name: 'Tea3',
         price: 60,
-        img: `<img src='/img/drinks/drink6.png' class='img-drink'>`,
-        imgBasket: `<img src='/img/drinks/drink6.png' class='basket-img-flattened'>`,
+        img: `<img src='img/drinks/drink6.png' class='img-drink'>`,
+        imgBasket: `<img src='img/drinks/drink6.png' class='basket-img-flattened'>`,
         btns: `<div>
                     <button class='btn-add' data-id='drk0005'>Add</button>
                     <button class='btn-info-drink' data-id='drk0005'>Filling</button>

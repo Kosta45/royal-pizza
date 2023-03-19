@@ -5,8 +5,8 @@ const menuSnack = [
         vendorCode: 'snc0000',
         name: 'Snack',
         price: 30,
-        img: `<img src='/img/snacks/snack1.png' class='img-snack'>`,
-        imgBasket: `<img src='/img/snacks/snack1.png' class='basket-img-narrow'>`,
+        img: `<img src='img/snacks/snack1.png' class='img-snack'>`,
+        imgBasket: `<img src='img/snacks/snack1.png' class='basket-img-narrow'>`,
         btns: `<div>
                     <button class='btn-add' data-id='snc0000'>Add</button>
                     <button class='btn-info-snack' data-id='snc0000'>Filling</button>
@@ -26,8 +26,8 @@ const menuSnack = [
         vendorCode: 'snc0001',
         name: 'French fries',
         price: 50,
-        img: `<img src='/img/snacks/snack2.png' class='img-snack'>`,
-        imgBasket: `<img src='/img/snacks/snack2.png' class='basket-img'>`,
+        img: `<img src='img/snacks/snack2.png' class='img-snack'>`,
+        imgBasket: `<img src='img/snacks/snack2.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='snc0001'>Add</button>
                     <button class='btn-info-snack' data-id='snc0001'>Filling</button>
@@ -45,8 +45,8 @@ const menuSnack = [
         vendorCode: 'snc0002',
         name: 'Almond',
         price: 30,
-        img: `<img src='/img/snacks/snack3.png' class='img-snack'>`,
-        imgBasket: `<img src='/img/snacks/snack3.png' class='basket-img'>`,
+        img: `<img src='img/snacks/snack3.png' class='img-snack'>`,
+        imgBasket: `<img src='img/snacks/snack3.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='snc0002'>Add</button>
                     <button class='btn-info-snack' data-id='snc0002'>Filling</button>
@@ -64,8 +64,8 @@ const menuSnack = [
         vendorCode: 'snc0003',
         name: 'Chips',
         price: 60,
-        img: `<img src='/img/snacks/snack4.png' class='img-snack'>`,
-        imgBasket: `<img src='/img/snacks/snack4.png' class='basket-img'>`,
+        img: `<img src='img/snacks/snack4.png' class='img-snack'>`,
+        imgBasket: `<img src='img/snacks/snack4.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='snc0003'>Add</button>
                     <button class='btn-info-snack' data-id='snc0003'>Filling</button>
@@ -84,8 +84,8 @@ const menuSnack = [
         vendorCode: 'snc0004',
         name: 'Sandwich',
         price: 50,
-        img: `<img src='/img/snacks/snack5.png' class='img-snack'>`,
-        imgBasket: `<img src='/img/snacks/snack5.png' class='basket-img'>`,
+        img: `<img src='img/snacks/snack5.png' class='img-snack'>`,
+        imgBasket: `<img src='img/snacks/snack5.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='snc0004'>Add</button>
                     <button class='btn-info-snack' data-id='snc0004'>Filling</button>
@@ -108,8 +108,8 @@ const menuSnack = [
         vendorCode: 'snc0005',
         name: 'Nuggets',
         price: 60,
-        img: `<img src='/img/snacks/snack6.png' class='img-snack'>`,
-        imgBasket: `<img src='/img/snacks/snack6.png' class='basket-img'>`,
+        img: `<img src='img/snacks/snack6.png' class='img-snack'>`,
+        imgBasket: `<img src='img/snacks/snack6.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='snc0005'>Add</button>
                     <button class='btn-info-snack' data-id='snc0005'>Filling</button>

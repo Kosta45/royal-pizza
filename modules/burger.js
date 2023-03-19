@@ -5,8 +5,8 @@ const menuBurger = [
         vendorCode: 'brg0000',
         name: 'Burger',
         price: 30,
-        img: `<img src='/img/burgers/Burger1.png' class='img-burger'>`,
-        imgBasket: `<img src='/img/burgers/Burger1.png' class='basket-img'>`,
+        img: `<img src='img/burgers/Burger1.png' class='img-burger'>`,
+        imgBasket: `<img src='img/burgers/Burger1.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='brg0000'>Add</button>
                     <button class='btn-info-burger' data-id='brg0000'>Filling</button>
@@ -29,8 +29,8 @@ const menuBurger = [
         vendorCode: 'brg0001',
         name: 'Double-cheese',
         price: 50,
-        img: `<img src='/img/burgers/Burger2.png' class='img-burger'>`,
-        imgBasket: `<img src='/img/burgers/Burger2.png' class='basket-img'>`,
+        img: `<img src='img/burgers/Burger2.png' class='img-burger'>`,
+        imgBasket: `<img src='img/burgers/Burger2.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='brg0001'>Add</button>
                     <button class='btn-info-burger' data-id='brg0001'>Filling</button>
@@ -54,8 +54,8 @@ const menuBurger = [
         vendorCode: 'brg0002',
         name: 'Eggs-burger',
         price: 30,
-        img: `<img src='/img/burgers/Burger3.png' class='img-burger'>`,
-        imgBasket: `<img src='/img/burgers/Burger3.png' class='basket-img'>`,
+        img: `<img src='img/burgers/Burger3.png' class='img-burger'>`,
+        imgBasket: `<img src='img/burgers/Burger3.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='brg0002'>Add</button>
                     <button class='btn-info-burger' data-id='brg0002'>Filling</button>
@@ -78,8 +78,8 @@ const menuBurger = [
         vendorCode: 'brg0003',
         name: 'Gamburger',
         price: 60,
-        img: `<img src='/img/burgers/Burger4.png' class='img-burger'>`,
-        imgBasket: `<img src='/img/burgers/Burger4.png' class='basket-img'>`,
+        img: `<img src='img/burgers/Burger4.png' class='img-burger'>`,
+        imgBasket: `<img src='img/burgers/Burger4.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='brg0003'>Add</button>
                     <button class='btn-info-burger' data-id='brg0003'>Filling</button>
@@ -102,8 +102,8 @@ const menuBurger = [
         vendorCode: 'brg0004',
         name: 'Golden-burger',
         price: 50,
-        img: `<img src='/img/burgers/Burger5.png' class='img-burger'>`,
-        imgBasket: `<img src='/img/burgers/Burger5.png' class='basket-img'>`,
+        img: `<img src='img/burgers/Burger5.png' class='img-burger'>`,
+        imgBasket: `<img src='img/burgers/Burger5.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='brg0004'>Add</button>
                     <button class='btn-info-burger' data-id='brg0004'>Filling</button>
@@ -126,8 +126,8 @@ const menuBurger = [
         vendorCode: 'brg0005',
         name: 'BigBurger',
         price: 60,
-        img: `<img src='/img/burgers/Burger6.png' class='img-burger'>`,
-        imgBasket: `<img src='/img/burgers/Burger6.png' class='basket-img'>`,
+        img: `<img src='img/burgers/Burger6.png' class='img-burger'>`,
+        imgBasket: `<img src='img/burgers/Burger6.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='brg0005'>Add</button>
                     <button class='btn-info-burger' data-id='brg0005'>Filling</button>
@@ -149,8 +149,8 @@ const menuBurger = [
         vendorCode: 'brg0006',
         name: 'Cheeseburger',
         price: 40,
-        img: `<img src='/img/burgers/Burger7.png' class='img-burger'>`,
-        imgBasket: `<img src='/img/burgers/Burger7.png' class='basket-img'>`,
+        img: `<img src='img/burgers/Burger7.png' class='img-burger'>`,
+        imgBasket: `<img src='img/burgers/Burger7.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='brg0006'>Add</button>
                     <button class='btn-info-burger' data-id='brg0006'>Filling</button>
@@ -174,8 +174,8 @@ const menuBurger = [
         vendorCode: 'brg0007',
         name: 'BlackBurger',
         price: 33,
-        img: `<img src='/img/burgers/Burger8.png' class='img-burger'>`,
-        imgBasket: `<img src='/img/burgers/Burger8.png' class='basket-img'>`,
+        img: `<img src='img/burgers/Burger8.png' class='img-burger'>`,
+        imgBasket: `<img src='img/burgers/Burger8.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='brg0007'>Add</button>
                     <button class='btn-info-burger' data-id='brg0007'>Filling</button>
@@ -199,8 +199,8 @@ const menuBurger = [
         vendorCode: 'brg0008',
         name: 'Sausage-burger',
         price: 28,
-        img: `<img src='/img/burgers/Burger9.png' class='img-burger'>`,
-        imgBasket: `<img src='/img/burgers/Burger9.png' class='basket-img'>`,
+        img: `<img src='img/burgers/Burger9.png' class='img-burger'>`,
+        imgBasket: `<img src='img/burgers/Burger9.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='brg0008'>Add</button>
                     <button class='btn-info-burger' data-id='brg0008'>Filling</button>
