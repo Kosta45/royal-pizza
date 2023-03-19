@@ -5,7 +5,7 @@ const menuPizza = [
         vendorCode: 'piz0000',
         name: 'Mushrooms-Сheese',
         price: 30,
-        img: `<img src='/img/pizzies/Mushrooms-Сheese-pizza.png' class='img-pizza'>`,
+        img: `<img src='img/pizzies/Mushrooms-Сheese-pizza.png' class='img-pizza'>`,
         imgBasket: `<img src='/img/pizzies/Mushrooms-Сheese-pizza.png' class='basket-img'>`,
         btns: `<div>
                     <button class='btn-add' data-id='piz0000'>Add</button>
