@@ -30,8 +30,8 @@
                     <div class="home-nav nav-btn">
                         <i class="fa-solid fa-house-user"></i>
                     </div>
-                    <div class="favorit-nav nav-btn">
-                        <i class="fa-solid fa-heart"></i>
+                    <div class="charity-nav nav-btn">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
                     </div>
                     <div class="basket-nav nav-btn">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -39,9 +39,9 @@
                     <div class="coments-nav nav-btn">
                         <i class="fa-solid fa-message"></i>
                     </div>
-                    <div class="wallet-nav nav-btn">
+                    <!-- <div class="wallet-nav nav-btn">  Возможно позже захочу расширить функции nav-menu!
                         <i class="fa-solid fa-wallet"></i>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="footer-nav">
                     <div class="line-nav ">
@@ -56,10 +56,10 @@
             <main class="main-block">
                 <div class="search">
                     <div>
-                        <h2>Today's meny</h2>
+                        <h1>Royal Pizza</h1>
                     </div>
                     <div>
-                        <input class="search-type" type="text" name="" id="">
+                        <h1 class="search-type">Todays Menu</h1>
                     </div>
                 </div>
                 <!-- Блок по самому центру, акция плюс категории блюд -->
@@ -67,7 +67,7 @@
                     <div class="prize">
                         <div class="delivery-bike"><img class="bike" src="/img/bike.png" alt=""></div>
                         <div class="prize-info">
-                            <h2 class="prize-title">Hello </h2>
+                            <h2 class="prize-title">Hello</h2>
                             <span class="prize-text">Get free delivery every $15 purchase</span>
                             <button class="prize-btn">Learn More</button>
                         </div>
@@ -104,19 +104,31 @@
                 <div class="list-order">
                     <h2>Order Summary</h2>
                     <div class="summary">
+                        <button class="maximaze-close">
+                            <i class="fa-solid fa-square-xmark"></i>
+                        </button>
                     </div>
                     <div>----------------------------------------------------</div>
                     <div class="total">
-                        Total:<span class="total-sum"></span>
+                        <span>Total:</span>
+                        <span class="total-sum"></span>
                     </div>
                 </div>
                 <div class="submit-order">
                     <div class="adress">
                         <h2>Delivery Adress</h2>
-                        <button class="add-adress">Edit</button>
                     </div>
-                    <div class="display-adress">dsd</div>
-                    <button class="submit">Submit</button>
+                    <div class="adress-block">
+                        <div class="display-adress">
+                            <span> Your adress:</span>
+                            <span class="users-adress"></span>
+                        </div>
+                        <div class="enter-adress">
+                            <input class='input-adress' type="text" name="" id="" value="Enter your adress">
+                            <i class="fa-regular fa-circle-check accept-adress"></i>
+                        </div>
+                    </div>
+                    <button class="submit">Submit order</button>
                 </div>
             </div>
 
@@ -126,8 +138,10 @@
 
 
 
-        <!-- Окошко для логина (Попап)=============================  -->
+        <!-- Ниже идут различные поп-апы -->
+        <!-- Ниже идут различные поп-апы -->
 
+        <!-- Окошко для логина (Попап)=============================  -->
         <div id="popup" class="popup">
             <div class="popup-log-in">
                 <div class="popup-name field-info">
@@ -146,13 +160,93 @@
     </div>
 
 
+    <!-- Окошко для всплывание акции. Попап акция -->
+    <div id="popup-discount" class="popup-discount">
+        <div class="discount">
+            <h2 class="header-discount">Get free delivery every $15 purchase</h2>
+            <div class="decription-discount">
+                Lorem, ipsum dolor sit amet consectetur adipisicin
+                Lorem, ipsum dolor sit amet consectetur adipisicin
+                Lorem, ipsum dolor sit amet consectetur adipisicin
+                Lorem, ipsum dolor sit amet consectetur adipisicin
+                Lorem, ipsum dolor sit amet consectetur adipisicin
+            </div>
+            <button class="close-prize">
+                <i class="fa-solid fa-check fa-check-hover"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Окошко для благотварительности -->
+    <!-- Окошко для благотварительности -->
+    <div class="charity-block">
+        <div class="charity">
+            <div>
+                <span class="header-charity">Helping children</span>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="info-charity">
+                You can join a charity event. The charitable organization is engaged in helping orphanages.
+                You can add as little as $1 to your order for charity.
+            </div>
+            <div class="btns-charity">
+                <button class="add-charity" data-id="chrt000">
+                    <i class="fa-solid fa-check check-charity"></i>
+                </button>
+                <button class="close-charity">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Окошко для отзывов -->
+    <div class="review">
+        <div class="review-content">
+            <h4>Here you can leave your feedback =)</h4>
+            <textarea class="review-input" name="" id="" cols="30" rows="8"></textarea>
+            <button class="close-review">Send</button>
+        </div>
+    </div>
+
+
+    <!-- Профиль пользователя -->
+    <div class="profile">
+        <div class="profile-block">
+            <button class="close-profile"><i class="fa-solid fa-square-xmark"></i></button>
+            <div class="name-surname">
+                <span class="profile-name"></span>
+                <span class="profile-surname"></span>
+            </div>
+            <div class="contacts">
+                <div class="email-block">
+                    <div class="email-line">
+                        <span>Email:</span>
+                        <span class="out-email">Enter your Email</span>
+                    </div>
+                    <input class="email-input" type="email" name="" id="">
+                    <button class="submit-ok submit-email">OK</button>
+                </div>
+                <div class="number-block">
+                    <div class="number-line">
+                        <span>Number:</span>
+                        <span class="out-number">Enter your Number</span>
+                    </div>
+                    <input class="number-input" type="number" name="" id="">
+                    <button class="submit-ok submit-number">OK</button>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </div>
 
 
 
 
 
-    <!-- <div class></div> -->
-    <!-- <script src="data.js" defer></script> -->
     <script type="module" src="script.js" defer async></script>
 </body>
 

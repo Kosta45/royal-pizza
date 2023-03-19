@@ -13,15 +13,39 @@ function appPizzaShop() {
     const btnBurgerChoice = document.querySelector('.burger');
     const btnSnackChoice = document.querySelector('.snack');
     const btnDrinkChoice = document.querySelector('.drink');
-    const personName = document.querySelector('.popup-name');
-    const personSurame = document.querySelector('.popup-surname');
     const displayName = document.querySelector('.display-name');
     const displaySurname = document.querySelector('.display-surname');
     const logName = document.querySelector('.log-name');
     const logSurname = document.querySelector('.log-surname');
     const logOutButton = document.querySelector('.log-out-nav');
     const btnFilling = document.querySelector('.btn-info');
+    const btnOpenLearnMore = document.querySelector('.prize-btn');
+    const btnCloseLearnMore = document.querySelector('.close-prize');
+    const btnOpenComent = document.querySelector('.coments-nav');
+    const btnCloseComent = document.querySelector('.close-review');
+    const btnBasketNav = document.querySelector('.basket-nav');
+    const btnCloseMaximazeBasket = document.querySelector('.maximaze-close');
+    const btnHomeProfile = document.querySelector('.home-nav');
+    const btnCloseHomeProfile = document.querySelector('.close-profile');
 
+    //Selectors for window Charity.
+    const btnCharityOpen = document.querySelector('.charity-nav');
+    const btnCharityClose = document.querySelector('.close-charity');
+    const btnCharityAdd = document.querySelector('.add-charity');
+
+    // Selectors for window Profile User. Selectors for functions
+    // Selectors for window Profile User. Selectors for functions
+    const emailUser = document.querySelector('.email-input');
+    const numberUser = document.querySelector('.number-input');
+    const emailBlockDisplay = document.querySelector('.out-email');
+    const numberBlockDisplay = document.querySelector('.out-number');
+    const profileNameDisplay = document.querySelector('.profile-name');
+    const profileSurnameDisplay = document.querySelector('.profile-surname');
+
+    // Selector for window "Input Adress"
+    const inputAdress = document.querySelector('.input-adress');
+    const btnSubmitAdress = document.querySelector('.accept-adress');
+    const fieldForAdress = document.querySelector('.users-adress');
 
 
     // Adding Event Listener
@@ -35,382 +59,187 @@ function appPizzaShop() {
     document.addEventListener('click', createFillingBurger);
     document.addEventListener('click', createFillingSnack);
     document.addEventListener('click', createFillingDrink);
+    btnOpenLearnMore.addEventListener('click', learnMorePrize);
+    btnCloseLearnMore.addEventListener('click', closeLearnMore);
+    btnOpenComent.addEventListener('click', openComent);
+    btnCloseComent.addEventListener('click', closeComent);
+    btnBasketNav.addEventListener('click', maximaizeSummary);
+    btnCloseMaximazeBasket.addEventListener('click', closeMaximaizeSummary);
+    btnHomeProfile.addEventListener('click', openProfile);
+    btnCloseHomeProfile.addEventListener('click', closeProfile);
+    btnCharityOpen.addEventListener('click', openCharity);
+    btnCharityClose.addEventListener('click', closeCharity);
+    btnCharityAdd.addEventListener('click', addCharity);
+    btnSubmitAdress.addEventListener('click', addingAdress);
 
     // Adding name and surname in field info person
     popupButton.onclick = logDisplay;
+    document.addEventListener('click', addNumberAndEmail);
 
-
-
-
-    // Menu. Array for choice menu. Can changing price, image, button and name -----------------------------------------------------------------------------------
-    // const menuPizza = [
-    //     {
-    //         vendorCode: 'piz0000',
-    //         name: 'Mushrooms-Сheese',
-    //         price: 30,
-    //         img: `<img src='/img/pizzies/Mushrooms-Сheese-pizza.png' class='img-pizza'>`,
-    //         btns: `<div>
-    //                     <button class='btn-add' data-id='piz0000'>Add</button>
-    //                     <button class='btn-info' data-id='piz0000'>Filling</button>
-    //                 </div>`,
-    //         filling: `<div class='box-filling-pizza'> 
-    //                     <ul class='filling-list-pizza'>
-    //                         <li>Salami</li>
-    //                         <li>Cheese</li>
-    //                         <li>Mushrooms</li>
-    //                         <li>Olives</li>
-    //                         <li>Parsley</li>
-    //                     </ul>
-    //                     <button class='close-filling'>
-    //                         <i class="fa-solid fa-xmark close-list"></i>
-    //                     </button>
-    //                 </div>`
-    //     },
-    //     {
-    //         vendorCode: 'piz0001',
-    //         name: 'Omelette-pizza',
-    //         price: 50,
-    //         img: `<img src='/img/pizzies/Omelette-pizza.png' class='img-pizza'>`,
-    //         btns: `<div>
-    //                     <button class='btn-add' data-id='piz0001'>Add</button>
-    //                     <button class='btn-info' data-id='piz0001'>Filling</button>
-    //                 </div>`,
-    //         filling: `<div class='box-filling-pizza'> 
-    //                     <ul class='filling-list-pizza'>
-    //                         <li>Olives</li>
-    //                         <li>Mushrooms</li>
-    //                         <li>Tomato</li>
-    //                         <li>Ketchup</li>
-    //                         <li>Eggs</li>
-    //                         <li>Basil</li>
-    //                     </ul>
-    //                     <button class='close-filling close-list'>
-    //                         <i class="fa-solid fa-xmark close-list"></i>
-    //                     </button>
-    //                 </div>`
-    //     },
-    //     {
-    //         vendorCode: 'piz0002',
-    //         name: 'Roman-pizza',
-    //         price: 30,
-    //         img: `<img src='/img/pizzies/Roman-pizza.png' class='img-pizza'>`,
-    //         btns: `<div>
-    //                     <button class='btn-add' data-id='piz0002'>Add</button>
-    //                     <button class='btn-info' data-id='piz0002'>Filling</button>
-    //                 </div>`,
-    //         filling: `<div class='box-filling-pizza'> 
-    //                     <ul class='filling-list-pizza'>
-    //                         <li>Pepper</li>
-    //                         <li>Cheese</li>
-    //                         <li>Mushrooms</li>
-    //                         <li>Olives</li>
-    //                         <li>Basil</li>
-    //                     </ul>
-    //                     <button class='close-filling close-list'>
-    //                         <i class="fa-solid fa-xmark close-list"></i>
-    //                     </button>
-    //                 </div>`
-    //     },
-    //     {
-    //         vendorCode: 'piz0003',
-    //         name: 'Royal-pizza',
-    //         price: 60,
-    //         img: `<img src='/img/pizzies/Royal-pizza.png' class='img-pizza'> `,
-    //         btns: `<div>
-    //                     <button class='btn-add' data-id='piz0003'>Add</button>
-    //                     <button class='btn-info' data-id='piz0003'>Filling</button>
-    //                 </div>`,
-    //         filling: `<div class='box-filling-pizza'> 
-    //                     <ul class='filling-list-pizza'>
-    //                         <li>Chili</li>
-    //                         <li>Cheese</li>
-    //                         <li>Mushrooms</li>
-    //                         <li>Olives</li>
-    //                         <li>Pepper</li>
-    //                         <li>Tomato</li>
-    //                         <li>Ketchup</li>
-    //                         <li>Chicken</li>
-    //                     </ul>
-    //                     <button class='close-filling close-list'>
-    //                         <i class="fa-solid fa-xmark close-list"></i>
-    //                     </button>
-    //                 </div>`
-    //     },
-    //     {
-    //         vendorCode: 'piz0004',
-    //         name: 'Royal-two-pizza',
-    //         price: 50,
-    //         img: `<img src='/img/pizzies/Royal-two-pizza.png' class='img-pizza'>`,
-    //         btns: `<div>
-    //                     <button class='btn-add' data-id='piz0004'>Add</button>
-    //                     <button class='btn-info' data-id='piz0004'>Filling</button>
-    //                 </div>`,
-    //         filling: `<div class='box-filling-pizza'> 
-    //                     <ul class='filling-list-pizza'>
-    //                         <li>Tomato</li>
-    //                         <li>Pepper</li>
-    //                         <li>Mushrooms</li>
-    //                         <li>Olives</li>
-    //                         <li>Sour cream</li>
-    //                         <li>Basil</li>
-    //                         <li>Parsley</li>
-    //                         <li>Mozzarella</li>
-    //                     </ul>
-    //                     <button class='close-filling close-list'>
-    //                         <i class="fa-solid fa-xmark close-list"></i>
-    //                     </button>
-    //                 </div>`
-    //     },
-    //     {
-    //         vendorCode: 'piz0005',
-    //         name: 'Tomato-pizza',
-    //         price: 60,
-    //         img: `<img src='/img/pizzies/Tomato-pizza.png' class='img-pizza'>`,
-    //         btns: `<div>
-    //                     <button class='btn-add' data-id='piz0005'>Add</button>
-    //                     <button class='btn-info' data-id='piz0005'>Filling</button>
-    //                 </div>`,
-    //         filling: `<div class='box-filling-pizza'> 
-    //                     <ul class='filling-list-pizza'>
-    //                         <li>Tomato</li>
-    //                         <li>Basil</li>
-    //                         <li>Ketchup</li>
-    //                         <li>Olives</li>
-    //                         <li>Mozzarella</li>
-    //                     </ul>
-    //                     <button class='close-filling close-list'>
-    //                         <i class="fa-solid fa-xmark close-list"></i>
-    //                     </button>
-    //                 </div>`
-    //     },
-    //     {
-    //         vendorCode: 'piz0006',
-    //         name: 'DRAGON',
-    //         price: 40,
-    //         img: `<img src='/img/pizzies/DRAGON.png' class='img-pizza'>`,
-    //         btns: `<div>
-    //                     <button class='btn-add' data-id='piz0006'>Add</button>
-    //                     <button class='btn-info' data-id='piz0006'>Filling</button>
-    //                 </div>`,
-    //         filling: `<div class='box-filling-pizza'> 
-    //                     <ul class='filling-list-pizza'>
-    //                         <li>Pepper Khotstar</li>
-    //                         <li>Cheese</li>
-    //                         <li>Olives</li>
-    //                         <li>Salami</li>
-    //                         <li>Mayonnaise</li>
-    //                         <li>Onions</li>
-    //                     </ul>
-    //                     <button class='close-filling close-list'>
-    //                         <i class="fa-solid fa-xmark close-list"></i>
-    //                     </button>
-    //                 </div>`
-    //     },
-    //     {
-    //         vendorCode: 'piz0007',
-    //         name: 'Easy-pizza',
-    //         price: 33,
-    //         img: `<img src='/img/pizzies/Easy-pizza.png' class='img-pizza'> `,
-    //         btns: `<div>
-    //                     <button class='btn-add' data-id='piz0007'>Add</button>
-    //                     <button class='btn-info' data-id='piz0007'>Filling</button>
-    //                 </div>`,
-    //         filling: `<div class='box-filling-pizza'> 
-    //                     <ul class='filling-list-pizza'>
-    //                         <li>Pepper</li>
-    //                         <li>Cheese</li>
-    //                         <li>Mushrooms</li>
-    //                         <li>Olives</li>
-    //                         <li>Tomato</li>
-    //                     </ul>
-    //                     <button class='close-filling close-list'>
-    //                         <i class="fa-solid fa-xmark close-list"></i>
-    //                     </button>
-    //                 </div>`
-    //     },
-    //     {
-    //         vendorCode: 'piz0008',
-    //         name: 'Marinara',
-    //         price: 28,
-    //         img: `<img src='/img/pizzies/Marinara.png' class='img-pizza'>`,
-    //         btns: `<div>
-    //                     <button class='btn-add' data-id='piz0008'>Add</button>
-    //                     <button class='btn-info' data-id='piz0008'>Filling</button>
-    //                 </div>`,
-    //         filling: `<div class='box-filling-pizza'> 
-    //                     <ul class='filling-list-pizza'>
-    //                         <li>Krights</li>
-    //                         <li>Squid</li>
-    //                         <li>Olives</li>
-    //                         <li>Cheese</li>
-    //                     </ul>
-    //                     <button class='close-filling close-list'>
-    //                         <i class="fa-solid fa-xmark close-list"></i>
-    //                     </button>
-    //                 </div>`
-    //     }
-    // // ];
-    // const menuBurger = [
-    //     {
-    //         vendorCode: 'brg0000',
-    //         name: 'Burger',
-    //         price: 30,
-    //         img: `<img src='/img/burgers/Burger1.png' class='img-burger'>`,
-    //         btn: `<button class='btn-add' data-id='brg0000'>Add</button>`
-    //     },
-    //     {
-    //         vendorCode: 'brg0001',
-    //         name: 'Double-cheeseburger',
-    //         price: 50,
-    //         img: `<img src='/img/burgers/Burger2.png' class='img-burger'>`,
-    //         btn: `<button class='btn-add' data-id='brg0001'>Add</button>`
-    //     },
-    //     {
-    //         vendorCode: 'brg0002',
-    //         name: 'Eggs-burger',
-    //         price: 30,
-    //         img: `<img src='/img/burgers/Burger3.png' class='img-burger'>`,
-    //         btn: `<button class='btn-add' data-id='brg0002'>Add</button>`
-    //     },
-    //     {
-    //         vendorCode: 'brg0003',
-    //         name: 'Gamburger',
-    //         price: 60,
-    //         img: `<img src='/img/burgers/Burger4.png' class='img-burger'>`,
-    //         btn: `<button class='btn-add' data-id='brg0003'>Add</button>`
-    //     },
-    //     {
-    //         vendorCode: 'brg0004',
-    //         name: 'Golden-burger',
-    //         price: 50,
-    //         img: `<img src='/img/burgers/Burger5.png' class='img-burger'>`,
-    //         btn: `<button class='btn-add' data-id='brg0004'>Add</button>`
-    //     },
-    //     {
-    //         vendorCode: 'brg0005',
-    //         name: 'BigBurger',
-    //         price: 60,
-    //         img: `<img src='/img/burgers/Burger6.png' class='img-burger'>`,
-    //         btn: `<button class='btn-add' data-id='brg0005'>Add</button>`
-    //     },
-    //     {
-    //         vendorCode: 'brg0006',
-    //         name: 'Cheeseburger',
-    //         price: 40,
-    //         img: `<img src='/img/burgers/Burger7.png' class='img-burger'>`,
-    //         btn: `<button class='btn-add' data-id='brg0006'>Add</button>`
-    //     },
-    //     {
-    //         vendorCode: 'brg0007',
-    //         name: 'BlackBurger',
-    //         price: 33,
-    //         img: `<img src='/img/burgers/Burger8.png' class='img-burger'>`,
-    //         btn: `<button class='btn-add' data-id='brg0007'>Add</button>`
-    //     },
-    //     {
-    //         vendorCode: 'brg0008',
-    //         name: 'Sausage-burger',
-    //         price: 28,
-    //         img: `<img src='/img/burgers/Burger9.png' class='img-burger'>`,
-    //         btn: `<button class='btn-add' data-id='brg0008'>Add</button>`
-    //     }
-    // ];
-    // const menuSnack = [
-    //     { vendorCode: 'snc0000', name: 'Food1', price: 30, img: `<img src='/img/snacks/snack1.png' class='img-snack'>`, btn: `<button class='btn-add' data-id='snc0000'>Add</button>` },
-    //     { vendorCode: 'snc0001', name: 'Food2', price: 50, img: `<img src='/img/snacks/snack2.png' class='img-snack'>`, btn: `<button class='btn-add' data-id='snc0001'>Add</button>` },
-    //     { vendorCode: 'snc0002', name: 'Food3', price: 30, img: `<img src='/img/snacks/snack3.png' class='img-snack'>`, btn: `<button class='btn-add' data-id='snc0002'>Add</button>` },
-    //     { vendorCode: 'snc0003', name: 'Food4', price: 60, img: `<img src='/img/snacks/snack4.png' class='img-snack'>`, btn: `<button class='btn-add' data-id='snc0003'>Add</button>` },
-    //     { vendorCode: 'snc0004', name: 'Food5', price: 50, img: `<img src='/img/snacks/snack5.png' class='img-snack'>`, btn: `<button class='btn-add' data-id='snc0004'>Add</button>` },
-    //     { vendorCode: 'snc0005', name: 'Food6', price: 60, img: `<img src='/img/snacks/snack6.png' class='img-snack'>`, btn: `<button class='btn-add' data-id='snc0005'>Add</button>` }
-    // ];
-    // const menuDrink = [
-    //     { vendorCode: 'drk0000', name: 'Cola', price: 30, img: `<img src='/img/drinks/drink1.png' class='img-drink'>`, btn: `<button class='btn-add' data-id='drk0000'>Add</button>` },
-    //     { vendorCode: 'drk0001', name: 'Sprite', price: 50, img: `<img src='/img/drinks/drink2.png' class='img-drink'>`, btn: `<button class='btn-add' data-id='drk0001'>Add</button>` },
-    //     { vendorCode: 'drk0002', name: 'Coffe', price: 30, img: `<img src='/img/drinks/drink3.png' class='img-drink'>`, btn: `<button class='btn-add' data-id='drk0002'>Add</button>` },
-    //     { vendorCode: 'drk0003', name: 'Tea', price: 60, img: `<img src='/img/drinks/drink4.png' class='img-drink'>`, btn: `<button class='btn-add' data-id='drk0003'>Add</button>` },
-    //     { vendorCode: 'drk0004', name: 'Tea2', price: 50, img: `<img src='/img/drinks/drink5.png' class='img-drink'>`, btn: `<button class='btn-add' data-id='drk0004'>Add</button>` },
-    //     { vendorCode: 'drk0005', name: 'Tea3', price: 60, img: `<img src='/img/drinks/drink6.png' class='img-drink'>`, btn: `<button class='btn-add' data-id='drk0005'>Add</button>` }
-    // ];
 
 
     //Parts code for functions innerHTML to create food menu ------------
     //Parts code for functions innerHTML to create food menu ------------
     const menuInnerPizza = `<div class='block-pizza'>
         <div class='box-pizza box-1-p'> ${menuPizza[0].img} <span> ${menuPizza[0].name} ${menuPizza[0].price}$</span> ${menuPizza[0].btns} </div>
-        <div class='box-pizza box-2-p'> ${menuPizza[1].img} <span> ${menuPizza[1].name} ${menuPizza[0].price}$</span> ${menuPizza[1].btns} </div>
-        <div class='box-pizza box-3-p'> ${menuPizza[2].img} <span> ${menuPizza[2].name} ${menuPizza[0].price}$</span> ${menuPizza[2].btns} </div>
+        <div class='box-pizza box-2-p'> ${menuPizza[1].img} <span> ${menuPizza[1].name} ${menuPizza[1].price}$</span> ${menuPizza[1].btns} </div>
+        <div class='box-pizza box-3-p'> ${menuPizza[2].img} <span> ${menuPizza[2].name} ${menuPizza[2].price}$</span> ${menuPizza[2].btns} </div>
         </div>
         <div class='block-pizza'>
-        <div class='box-pizza box-4-p'> ${menuPizza[3].img} <span> ${menuPizza[3].name} ${menuPizza[0].price}$</span> ${menuPizza[3].btns} </div>
-        <div class='box-pizza box-5-p'> ${menuPizza[4].img} <span> ${menuPizza[4].name} ${menuPizza[0].price}$</span> ${menuPizza[4].btns} </div>
-        <div class='box-pizza box-6-p'> ${menuPizza[5].img} <span> ${menuPizza[5].name} ${menuPizza[0].price}$</span> ${menuPizza[5].btns} </div>
+        <div class='box-pizza box-4-p'> ${menuPizza[3].img} <span> ${menuPizza[3].name} ${menuPizza[3].price}$</span> ${menuPizza[3].btns} </div>
+        <div class='box-pizza box-5-p'> ${menuPizza[4].img} <span> ${menuPizza[4].name} ${menuPizza[4].price}$</span> ${menuPizza[4].btns} </div>
+        <div class='box-pizza box-6-p'> ${menuPizza[5].img} <span> ${menuPizza[5].name} ${menuPizza[5].price}$</span> ${menuPizza[5].btns} </div>
         </div>
         <div class='block-pizza'>
-        <div class='box-pizza box-7-p'> ${menuPizza[6].img} <span> ${menuPizza[6].name} ${menuPizza[0].price}$</span> ${menuPizza[6].btns} </div>
-        <div class='box-pizza box-8-p'> ${menuPizza[7].img} <span> ${menuPizza[7].name} ${menuPizza[0].price}$</span> ${menuPizza[7].btns} </div>
-        <div class='box-pizza box-9-p'> ${menuPizza[8].img} <span> ${menuPizza[8].name} ${menuPizza[0].price}$</span> ${menuPizza[8].btns} </div>
+        <div class='box-pizza box-7-p'> ${menuPizza[6].img} <span> ${menuPizza[6].name} ${menuPizza[6].price}$</span> ${menuPizza[6].btns} </div>
+        <div class='box-pizza box-8-p'> ${menuPizza[7].img} <span> ${menuPizza[7].name} ${menuPizza[7].price}$</span> ${menuPizza[7].btns} </div>
+        <div class='box-pizza box-9-p'> ${menuPizza[8].img} <span> ${menuPizza[8].name} ${menuPizza[8].price}$</span> ${menuPizza[8].btns} </div>
         </div>
         `;
     const menuInnerBurger = `<div class='block-burger'>
         <div class='box-burger box-1-b'> ${menuBurger[0].img} <span>${menuBurger[0].name} ${menuBurger[0].price}$</span> ${menuBurger[0].btns} </div>
-        <div class='box-burger box-2-b'> ${menuBurger[1].img} <span>${menuBurger[1].name} ${menuBurger[0].price}$</span> ${menuBurger[1].btns} </div>
-        <div class='box-burger box-3-b'> ${menuBurger[2].img} <span>${menuBurger[2].name} ${menuBurger[0].price}$</span> ${menuBurger[2].btns} </div>
+        <div class='box-burger box-2-b'> ${menuBurger[1].img} <span>${menuBurger[1].name} ${menuBurger[1].price}$</span> ${menuBurger[1].btns} </div>
+        <div class='box-burger box-3-b'> ${menuBurger[2].img} <span>${menuBurger[2].name} ${menuBurger[2].price}$</span> ${menuBurger[2].btns} </div>
         </div>
         <div class='block-burger'>
-        <div class='box-burger box-4-b'> ${menuBurger[3].img} <span>${menuBurger[3].name} ${menuBurger[0].price}$</span> ${menuBurger[3].btns} </div>
-        <div class='box-burger box-5-b'> ${menuBurger[4].img} <span>${menuBurger[4].name} ${menuBurger[0].price}$</span> ${menuBurger[4].btns} </div>
-        <div class='box-burger box-6-b'> ${menuBurger[5].img} <span>${menuBurger[5].name} ${menuBurger[0].price}$</span> ${menuBurger[5].btns} </div>
+        <div class='box-burger box-4-b'> ${menuBurger[3].img} <span>${menuBurger[3].name} ${menuBurger[2].price}$</span> ${menuBurger[3].btns} </div>
+        <div class='box-burger box-5-b'> ${menuBurger[4].img} <span>${menuBurger[4].name} ${menuBurger[3].price}$</span> ${menuBurger[4].btns} </div>
+        <div class='box-burger box-6-b'> ${menuBurger[5].img} <span>${menuBurger[5].name} ${menuBurger[4].price}$</span> ${menuBurger[5].btns} </div>
         </div>
         <div class='block-burger'>
-        <div class='box-burger box-7-b'> ${menuBurger[6].img} <span>${menuBurger[6].name} ${menuBurger[0].price}$</span> ${menuBurger[6].btns} </div>
-        <div class='box-burger box-8-b'> ${menuBurger[7].img} <span>${menuBurger[7].name} ${menuBurger[0].price}$</span> ${menuBurger[7].btns} </div>
-        <div class='box-burger box-9-b'> ${menuBurger[8].img} <span>${menuBurger[8].name} ${menuBurger[0].price}$</span> ${menuBurger[8].btns} </div>
+        <div class='box-burger box-7-b'> ${menuBurger[6].img} <span>${menuBurger[6].name} ${menuBurger[6].price}$</span> ${menuBurger[6].btns} </div>
+        <div class='box-burger box-8-b'> ${menuBurger[7].img} <span>${menuBurger[7].name} ${menuBurger[7].price}$</span> ${menuBurger[7].btns} </div>
+        <div class='box-burger box-9-b'> ${menuBurger[8].img} <span>${menuBurger[8].name} ${menuBurger[8].price}$</span> ${menuBurger[8].btns} </div>
         </div>
         `;
     const menuInnerSnacks = `<div class='block-snack'>
         <div class='box-snack box-1-s'> ${menuSnack[0].img} <span>${menuSnack[0].name} ${menuSnack[0].price}$</span> ${menuSnack[0].btns} </div>
-        <div class='box-snack box-2-s'> ${menuSnack[1].img} <span>${menuSnack[1].name} ${menuSnack[0].price}$</span> ${menuSnack[1].btns} </div>
-        <div class='box-snack box-3-s'> ${menuSnack[2].img} <span>${menuSnack[2].name} ${menuSnack[0].price}$</span> ${menuSnack[2].btns} </div>
+        <div class='box-snack box-2-s'> ${menuSnack[1].img} <span>${menuSnack[1].name} ${menuSnack[1].price}$</span> ${menuSnack[1].btns} </div>
+        <div class='box-snack box-3-s'> ${menuSnack[2].img} <span>${menuSnack[2].name} ${menuSnack[2].price}$</span> ${menuSnack[2].btns} </div>
         </div>
         <div class='block-snack'>
-        <div class='box-snack box-4-s'> ${menuSnack[3].img} <span>${menuSnack[3].name} ${menuSnack[0].price}$</span> ${menuSnack[3].btns} </div>
-        <div class='box-snack box-5-s'> ${menuSnack[4].img} <span>${menuSnack[4].name} ${menuSnack[0].price}$</span> ${menuSnack[4].btns} </div>
-        <div class='box-snack box-6-s'> ${menuSnack[5].img} <span>${menuSnack[5].name} ${menuSnack[0].price}$</span> ${menuSnack[5].btns} </div>
+        <div class='box-snack box-4-s'> ${menuSnack[3].img} <span>${menuSnack[3].name} ${menuSnack[3].price}$</span> ${menuSnack[3].btns} </div>
+        <div class='box-snack box-5-s'> ${menuSnack[4].img} <span>${menuSnack[4].name} ${menuSnack[4].price}$</span> ${menuSnack[4].btns} </div>
+        <div class='box-snack box-6-s'> ${menuSnack[5].img} <span>${menuSnack[5].name} ${menuSnack[5].price}$</span> ${menuSnack[5].btns} </div>
         </div>
         `;
     const menuInnerDrink = `<div class='block-drink'>
         <div class='box-drink box-1-d'> ${menuDrink[0].img} <span>${menuDrink[0].name} ${menuDrink[0].price}$</span> ${menuDrink[0].btns} </div>
-        <div class='box-drink box-2-d'> ${menuDrink[1].img} <span>${menuDrink[1].name} ${menuDrink[0].price}$</span> ${menuDrink[1].btns} </div>
-        <div class='box-drink box-3-d'> ${menuDrink[2].img} <span>${menuDrink[2].name} ${menuDrink[0].price}$</span> ${menuDrink[2].btns} </div>
+        <div class='box-drink box-2-d'> ${menuDrink[1].img} <span>${menuDrink[1].name} ${menuDrink[1].price}$</span> ${menuDrink[1].btns} </div>
+        <div class='box-drink box-3-d'> ${menuDrink[2].img} <span>${menuDrink[2].name} ${menuDrink[2].price}$</span> ${menuDrink[2].btns} </div>
         </div>
         <div class='block-drink'>
-        <div class='box-drink box-4-d'> ${menuDrink[3].img} <span>${menuDrink[3].name} ${menuDrink[0].price}$</span> ${menuDrink[3].btns} </div>
-        <div class='box-drink box-5-d'> ${menuDrink[4].img} <span>${menuDrink[4].name} ${menuDrink[0].price}$</span> ${menuDrink[4].btns} </div>
-        <div class='box-drink box-6-d'> ${menuDrink[5].img} <span>${menuDrink[5].name} ${menuDrink[0].price}$</span> ${menuDrink[5].btns} </div>
+        <div class='box-drink box-4-d'> ${menuDrink[3].img} <span>${menuDrink[3].name} ${menuDrink[3].price}$</span> ${menuDrink[3].btns} </div>
+        <div class='box-drink box-5-d'> ${menuDrink[4].img} <span>${menuDrink[4].name} ${menuDrink[4].price}$</span> ${menuDrink[4].btns} </div>
+        <div class='box-drink box-6-d'> ${menuDrink[5].img} <span>${menuDrink[5].name} ${menuDrink[5].price}$</span> ${menuDrink[5].btns} </div>
         </div>
         `;
 
     // Functions ================
 
     // Functions for person info. Adding in order Name and Surname
+    // Function for window Profile. Input, adding email and phone number. Below
     function logDisplay() {
         const valName = logName.value;
         const valSurname = logSurname.value;
         displayName.innerHTML = valName;
         displaySurname.innerHTML = valSurname;
+        profileNameDisplay.innerHTML = valName;
+        profileSurnameDisplay.innerHTML = valSurname;
+
     }
+
+
+    // Function for window Profile User. Adding number and email.
+    // Function for window Profile User. Adding number and email.
+    function addNumberAndEmail() {
+        if (event.target.classList.contains('submit-number')) {
+            numberBlockDisplay.innerHTML = `
+                                <div class='profile-info'>
+                                    ${numberUser.value}
+                                <div>`;
+        } else if (event.target.classList.contains('submit-email')) {
+            emailBlockDisplay.innerHTML = `
+                                <div profile-info>
+                                     ${emailUser.value}
+                                </div>`
+        };
+    };
 
     // Open field to type name and surname
     const openPopup = setTimeout(() => {
         const popupActive = document.querySelector('.popup');
         popupActive.classList.add('open');
     }, 1000);
-
     // CLose window with fields for type name and surname
     function closePopup() {
         const popupActiveTwo = document.querySelector('.popup.open');
         popupActiveTwo.classList.remove('open');
     };
+
+    //Function to open window Charity
+    function openCharity() {
+        const windowCharityOpen = document.querySelector('.charity-block');
+        windowCharityOpen.classList.add('open');
+    }
+    //Function to close window Charity
+    function closeCharity() {
+        const windowCharityClose = document.querySelector('.charity-block.open');
+        windowCharityClose.classList.remove('open');
+    }
+    function addCharity() {
+        const windowCharityClose = document.querySelector('.charity-block.open');
+        windowCharityClose.classList.remove('open');
+        displayCartOrder();
+    }
+
+    // Function to open window "learn More" about prize. 
+    function learnMorePrize() {
+        const learnMoreOpen = document.querySelector('.popup-discount')
+        learnMoreOpen.classList.add('open');
+    }
+    // Function to close window "learn More" about prize. 
+    function closeLearnMore() {
+        const learnMoreOpen = document.querySelector('.popup-discount.open');
+        learnMoreOpen.classList.remove('open');
+    };
+
+    // Function to open Profile users. Minimum informations.
+    function openProfile() {
+        const profile = document.querySelector('.profile');
+        profile.classList.add('open');
+    }
+    // Function to close Profile users. Minimum informations.
+    function closeProfile() {
+        const profileOpen = document.querySelector('.profile.open');
+        profileOpen.classList.remove('open')
+    }
+
+    // Function to open window "Coment" in nav-menu.
+    function openComent() {
+        const undisplayBlock = document.querySelector('.review');
+        undisplayBlock.classList.add('open');
+    }
+    // Function to close window "Coment" in nav-menu.
+    function closeComent() {
+        const displayBlock = document.querySelector('.review.open');
+        displayBlock.classList.remove('open');
+    }
+
+    // Function to open summary on all window.
+    function maximaizeSummary() {
+        const summaryOpen = document.querySelector('.summary');
+        const btnCloseMaximaze = document.querySelector('.maximaze-close');
+        summaryOpen.classList.add('open');
+        btnCloseMaximaze.classList.add('open');
+    }
+    // Function to сlose summary on all window.
+    function closeMaximaizeSummary() {
+        const summaryCloseOpen = document.querySelector('.summary.open');
+        const btnCloseMaximazeWindow = document.querySelector('.maximaze-close.open')
+        summaryCloseOpen.classList.remove('open');
+        btnCloseMaximazeWindow.classList.remove('open');
+    }
 
 
     // Function on choice menu. Create Burger, Snacks and Drinks lists. Code belowe
@@ -577,7 +406,7 @@ function appPizzaShop() {
         const closeFillingDrink = document.querySelector('.close-drink-list');
         closeFillingDrink.onclick = createChoiceMenuDrink;
     }
-    //function create filling cards. InnerHTML
+    //Function create filling cards. InnerHTML
     function displayFilling(elemBlock, elemFilling) {
         elemBlock.innerHTML = elemFilling;
     }
@@ -587,6 +416,7 @@ function appPizzaShop() {
 
     // Create functions for Basket
     // Function add product in basket
+    // Массив с номерами товаров. Айдишк.
     let basket = {
         'piz0000': 0,
         'piz0001': 0,
@@ -619,28 +449,44 @@ function appPizzaShop() {
         'drk0004': 0,
         'drk0005': 0
     };
+    // Добавление и удаление товара из корзины. Отрисовка коризны ниже!!
     document.onclick = (event) => {
         if (event.target.classList.contains('btn-add')) {
             addFunction(event.target.dataset.id);
-        }
+        };
         if (event.target.classList.contains('fa-minus')) {
-            cleareBasket(event.target.dataset.id)
+            cleareBasket(event.target.dataset.id);
         };
     };
+    // Добавление товара в корзину. Отрисовка корзины ниже!!
     function addFunction(id) {
         basket[id]++;
         displayCartOrder();
-        console.log(basket)
-    };
 
+
+        const displayTotal = document.querySelector('.total-sum');
+
+
+        // const summary = document.querySelectorAll('.summary')[0];
+        // const cart = summary.querySelectorAll('.cart-sum')[0];
+        // const cartsBasket = cart.getElementsByClassName('basket-list')[0];
+        // for (let i = 0; i < cartsBasket.length; i++) {
+        //     const price = cartsBasket.getElementsByClassName('price');
+        //     const syka = price[i]
+
+        //     displayTotal.innerHTML = price.innerHTML + '$';
+        //     console.log()
+        // };
+    };
+    // Удаление товара из корзины. Отрисовка корзины ниже!!
     function cleareBasket(id) {
         basket[id]--;
-        console.log(basket)
     }
 
 
     // Функция для отображения товара в корзине. Отрисовка товаров. Ниже находиться функция УДАЛЕНИЯ товаров из корзины и массива
     function displayCartOrder() {
+
         const sum = document.querySelector('.summary');
         const newCart = document.createElement('div');
         newCart.classList.add('cart-sum');
@@ -652,64 +498,64 @@ function appPizzaShop() {
             newCart.innerHTML = `<div class='basket-list'>
                                       <div>${menuPizza[0].imgBasket}</div>
                                       <div>${menuPizza[0].name}</div>
-                                      <div>${menuPizza[0].price}</div> 
+                                      <div class='price'>${menuPizza[0].price}</div> 
                                       <i data-id='piz0000' class="fa-solid fa-minus delete"></i>
-                                     </div>`
+                                     </div>`;
         }
         else if (event.target.dataset.id === menuPizza[1].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuPizza[1].imgBasket}</div>
                                   <div>${menuPizza[1].name}</div>
-                                  <div>${menuPizza[1].price}</div> 
+                                  <div class='price'>${menuPizza[1].price}</div> 
                                   <i data-id='piz0001' class="fa-solid fa-minus delete"></i>
                                  </div>`
         } else if (event.target.dataset.id === menuPizza[2].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuPizza[2].imgBasket}</div>
                                   <div>${menuPizza[2].name}</div>
-                                  <div>${menuPizza[2].price}</div> 
+                                  <div class='price'>${menuPizza[2].price}</div> 
                                   <i data-id='piz0002' class="fa-solid fa-minus delete"></i>
                                  </div>`
         } else if (event.target.dataset.id === menuPizza[3].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuPizza[3].imgBasket}</div>
                                   <div>${menuPizza[3].name}</div>
-                                  <div>${menuPizza[3].price}</div> 
+                                  <div class='price'>${menuPizza[3].price}</div> 
                                   <i data-id='piz0003' class="fa-solid fa-minus delete"></i>
                                  </div>`
         } else if (event.target.dataset.id === menuPizza[4].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuPizza[4].imgBasket}</div>
                                   <div>${menuPizza[4].name}</div>
-                                  <div>${menuPizza[4].price}</div> 
+                                  <div class='price'>${menuPizza[4].price}</div> 
                                   <i data-id='piz0004' class="fa-solid fa-minus delete"></i>
                                  </div>`
         } else if (event.target.dataset.id === menuPizza[5].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuPizza[5].imgBasket}</div>
                                   <div>${menuPizza[5].name}</div>
-                                  <div>${menuPizza[5].price}</div> 
+                                  <div class='price'>${menuPizza[5].price}</div> 
                                   <i data-id='piz0005' class="fa-solid fa-minus delete"></i>
                                  </div> `
         } else if (event.target.dataset.id === menuPizza[6].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuPizza[6].imgBasket}</div>
                                   <div>${menuPizza[6].name}</div>
-                                  <div>${menuPizza[6].price}</div> 
+                                  <div class='price'>${menuPizza[6].price}</div> 
                                   <i data-id='piz0006' class="fa-solid fa-minus delete"></i>
                                  </div> `
         } else if (event.target.dataset.id === menuPizza[7].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuPizza[7].imgBasket}</div>
                                   <div>${menuPizza[7].name}</div>
-                                  <div>${menuPizza[7].price}</div> 
+                                  <div class='price'>${menuPizza[7].price}</div> 
                                   <i data-id='piz0007' class="fa-solid fa-minus delete"></i>
                                  </div> `
         } else if (event.target.dataset.id === menuPizza[8].vendorCode) {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuPizza[8].imgBasket}</div>
                                   <div>${menuPizza[8].name}</div>
-                                  <div>${menuPizza[8].price}</div> 
+                                  <div class='price'>${menuPizza[8].price}</div> 
                                   <i data-id='piz0008' class="fa-solid fa-minus delete"></i>
                                  </div> `
         }
@@ -718,7 +564,7 @@ function appPizzaShop() {
             newCart.innerHTML = `<div class='basket-list'>
                                   <div>${menuBurger[0].imgBasket}</div>
                                   <div>${menuBurger[0].name}</div>
-                                  <div>${menuBurger[0].price}</div> 
+                                  <div class='price'>${menuBurger[0].price}</div> 
                                   <i data-id='brg0000' class="fa-solid fa-minus delete"></i>
                                  </div> `
         } else if (event.target.dataset.id === menuBurger[1].vendorCode) {
@@ -865,7 +711,15 @@ function appPizzaShop() {
                                   <div>${menuDrink[5].price}</div> 
                                   <i data-id='drk0005' class="fa-solid fa-minus delete"></i>
                                  </div> `
+        } else if (event.target.classList.contains('add-charity') || event.target.classList.contains('check-charity')) {
+            newCart.innerHTML = `<div class='basket-list'>
+                                  <div><i class="fa-solid fa-heart"></i></div>
+                                  <div>Helping children</div>
+                                  <div>1$</div> 
+                                  <i data-id='chrt000' class="fa-solid fa-minus delete"></i>
+                                 </div> `
         };
+
 
 
         // Function delete cart in total order
@@ -875,21 +729,19 @@ function appPizzaShop() {
             button.addEventListener('click', function (id) {
                 event.target.parentElement.parentElement.remove();
                 cleareBasket()
-                console.log(basket)
-                // updateCartTotal()
-            })
-        }
+            });
+        };
 
-        // function updateCartTotal() {
-        //     const cartItemContainer = document.getElementsByClassName('basket-list')[0];
-        //     cartItemContainer.getElementsByClassName('')
-        // }
+    };
 
+    function addingAdress() {
+        const adress = inputAdress.value;
+        fieldForAdress.innerHTML = adress;
     };
 
     // Вызываю функцию для первоночального появления выбора меню "Пиццы"
     createChoiceMenuPizza();
-}
+};
 
 
 // Call function all app  

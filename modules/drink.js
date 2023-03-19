@@ -43,7 +43,7 @@ const menuDrink = [
         name: 'Coffe',
         price: 30,
         img: `<img src='/img/drinks/drink3.png' class='img-drink'>`,
-        imgBasket: `<img src='/img/drinks/drink3.png' class='basket-img'>`,
+        imgBasket: `<img src='/img/drinks/drink3.png' class='basket-img-coffe'>`,
         btns: `<div>
                     <button class='btn-add' data-id='drk0002'>Add</button>
                     <button class='btn-info-drink' data-id='drk0002'>Filling</button>
@@ -66,7 +66,7 @@ const menuDrink = [
         name: 'Tea',
         price: 60,
         img: `<img src='/img/drinks/drink4.png' class='img-drink'>`,
-        imgBasket: `<img src='/img/drinks/drink4.png' class='basket-img'>`,
+        imgBasket: `<img src='/img/drinks/drink4.png' class='basket-img-flattened'>`,
         btns: `<div>
                     <button class='btn-add' data-id='drk0003'>Add</button>
                     <button class='btn-info-drink' data-id='drk0003'>Filling</button>
@@ -85,7 +85,7 @@ const menuDrink = [
         name: 'Tea2',
         price: 50,
         img: `<img src='/img/drinks/drink5.png' class='img-drink'>`,
-        imgBasket: `<img src='/img/drinks/drink5.png' class='basket-img'>`,
+        imgBasket: `<img src='/img/drinks/drink5.png' class='basket-img-flattened'>`,
         btns: `<div>
                     <button class='btn-add' data-id='drk0004'>Add</button>
                     <button class='btn-info-drink' data-id='drk0004'>Filling</button>
@@ -107,7 +107,7 @@ const menuDrink = [
         name: 'Tea3',
         price: 60,
         img: `<img src='/img/drinks/drink6.png' class='img-drink'>`,
-        imgBasket: `<img src='/img/drinks/drink6.png' class='basket-img'>`,
+        imgBasket: `<img src='/img/drinks/drink6.png' class='basket-img-flattened'>`,
         btns: `<div>
                     <button class='btn-add' data-id='drk0005'>Add</button>
                     <button class='btn-info-drink' data-id='drk0005'>Filling</button>
