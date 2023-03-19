@@ -103,9 +103,9 @@ function appPizzaShop() {
         <div class='box-burger box-3-b'> ${menuBurger[2].img} <span>${menuBurger[2].name} ${menuBurger[2].price}$</span> ${menuBurger[2].btns} </div>
         </div>
         <div class='block-burger'>
-        <div class='box-burger box-4-b'> ${menuBurger[3].img} <span>${menuBurger[3].name} ${menuBurger[2].price}$</span> ${menuBurger[3].btns} </div>
-        <div class='box-burger box-5-b'> ${menuBurger[4].img} <span>${menuBurger[4].name} ${menuBurger[3].price}$</span> ${menuBurger[4].btns} </div>
-        <div class='box-burger box-6-b'> ${menuBurger[5].img} <span>${menuBurger[5].name} ${menuBurger[4].price}$</span> ${menuBurger[5].btns} </div>
+        <div class='box-burger box-4-b'> ${menuBurger[3].img} <span>${menuBurger[3].name} ${menuBurger[3].price}$</span> ${menuBurger[3].btns} </div>
+        <div class='box-burger box-5-b'> ${menuBurger[4].img} <span>${menuBurger[4].name} ${menuBurger[4].price}$</span> ${menuBurger[4].btns} </div>
+        <div class='box-burger box-6-b'> ${menuBurger[5].img} <span>${menuBurger[5].name} ${menuBurger[5].price}$</span> ${menuBurger[5].btns} </div>
         </div>
         <div class='block-burger'>
         <div class='box-burger box-7-b'> ${menuBurger[6].img} <span>${menuBurger[6].name} ${menuBurger[6].price}$</span> ${menuBurger[6].btns} </div>

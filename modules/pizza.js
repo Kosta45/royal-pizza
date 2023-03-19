@@ -4,7 +4,7 @@ const menuPizza = [
     {
         vendorCode: 'piz0000',
         name: 'Mushrooms-Сheese',
-        price: 30,
+        price: 14,
         img: `<img src='img/pizzies/Mushrooms-Сheese-pizza.png' class='img-pizza'>`,
         imgBasket: `<img src='img/pizzies/Mushrooms-Сheese-pizza.png' class='basket-img'>`,
         btns: `<div>
@@ -27,7 +27,7 @@ const menuPizza = [
     {
         vendorCode: 'piz0001',
         name: 'Omelette-pizza',
-        price: 50,
+        price: 15,
         img: `<img src='img/pizzies/Omelette-pizza.png' class='img-pizza'>`,
         imgBasket: `<img src='img/pizzies/Omelette-pizza.png' class='basket-img'>`,
         btns: `<div>
@@ -51,7 +51,7 @@ const menuPizza = [
     {
         vendorCode: 'piz0002',
         name: 'Roman-pizza',
-        price: 30,
+        price: 16,
         img: `<img src='img/pizzies/Roman-pizza.png' class='img-pizza'>`,
         imgBasket: `<img src='img/pizzies/Roman-pizza.png' class='basket-img'>`,
         btns: `<div>
@@ -74,7 +74,7 @@ const menuPizza = [
     {
         vendorCode: 'piz0003',
         name: 'Royal-pizza',
-        price: 60,
+        price: 19,
         img: `<img src='img/pizzies/Royal-pizza.png' class='img-pizza'> `,
         imgBasket: `<img src='img/pizzies/Royal-pizza.png' class='basket-img'>`,
         btns: `<div>
@@ -100,7 +100,7 @@ const menuPizza = [
     {
         vendorCode: 'piz0004',
         name: 'Royal-two-pizza',
-        price: 50,
+        price: 19,
         img: `<img src='img/pizzies/Royal-two-pizza.png' class='img-pizza'>`,
         imgBasket: `<img src='img/pizzies/Royal-two-pizza.png' class='basket-img'>`,
         btns: `<div>
@@ -126,7 +126,7 @@ const menuPizza = [
     {
         vendorCode: 'piz0005',
         name: 'Tomato-pizza',
-        price: 60,
+        price: 11,
         img: `<img src='img/pizzies/Tomato-pizza.png' class='img-pizza'>`,
         imgBasket: `<img src='img/pizzies/Tomato-pizza.png' class='basket-img'>`,
         btns: `<div>
@@ -149,7 +149,7 @@ const menuPizza = [
     {
         vendorCode: 'piz0006',
         name: 'DRAGON',
-        price: 40,
+        price: 14,
         img: `<img src='img/pizzies/DRAGON.png' class='img-pizza'>`,
         imgBasket: `<img src='img/pizzies/DRAGON.png' class='basket-img'>`,
         btns: `<div>
@@ -173,7 +173,7 @@ const menuPizza = [
     {
         vendorCode: 'piz0007',
         name: 'Easy-pizza',
-        price: 33,
+        price: 12,
         img: `<img src='img/pizzies/Easy-pizza.png' class='img-pizza'> `,
         imgBasket: `<img src='img/pizzies/Easy-pizza.png' class='basket-img'>`,
         btns: `<div>
@@ -196,7 +196,7 @@ const menuPizza = [
     {
         vendorCode: 'piz0008',
         name: 'Marinara',
-        price: 28,
+        price: 19,
         img: `<img src='img/pizzies/Marinara.png' class='img-pizza'>`,
         imgBasket: `<img src='img/pizzies/Marinara.png' class='basket-img'>`,
         btns: `<div>

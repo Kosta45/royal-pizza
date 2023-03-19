@@ -4,7 +4,7 @@ const menuSnack = [
     {
         vendorCode: 'snc0000',
         name: 'Snack',
-        price: 30,
+        price: 1,
         img: `<img src='img/snacks/snack1.png' class='img-snack'>`,
         imgBasket: `<img src='img/snacks/snack1.png' class='basket-img-narrow'>`,
         btns: `<div>
@@ -25,7 +25,7 @@ const menuSnack = [
     {
         vendorCode: 'snc0001',
         name: 'French fries',
-        price: 50,
+        price: 2,
         img: `<img src='img/snacks/snack2.png' class='img-snack'>`,
         imgBasket: `<img src='img/snacks/snack2.png' class='basket-img'>`,
         btns: `<div>
@@ -44,7 +44,7 @@ const menuSnack = [
     {
         vendorCode: 'snc0002',
         name: 'Almond',
-        price: 30,
+        price: 2,
         img: `<img src='img/snacks/snack3.png' class='img-snack'>`,
         imgBasket: `<img src='img/snacks/snack3.png' class='basket-img'>`,
         btns: `<div>
@@ -63,7 +63,7 @@ const menuSnack = [
     {
         vendorCode: 'snc0003',
         name: 'Chips',
-        price: 60,
+        price: 2.75,
         img: `<img src='img/snacks/snack4.png' class='img-snack'>`,
         imgBasket: `<img src='img/snacks/snack4.png' class='basket-img'>`,
         btns: `<div>
@@ -83,7 +83,7 @@ const menuSnack = [
     {
         vendorCode: 'snc0004',
         name: 'Sandwich',
-        price: 50,
+        price: 2.5,
         img: `<img src='img/snacks/snack5.png' class='img-snack'>`,
         imgBasket: `<img src='img/snacks/snack5.png' class='basket-img'>`,
         btns: `<div>
@@ -107,7 +107,7 @@ const menuSnack = [
     {
         vendorCode: 'snc0005',
         name: 'Nuggets',
-        price: 60,
+        price: 4,
         img: `<img src='img/snacks/snack6.png' class='img-snack'>`,
         imgBasket: `<img src='img/snacks/snack6.png' class='basket-img'>`,
         btns: `<div>
